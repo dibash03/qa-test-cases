@@ -1,0 +1,9 @@
+## Login Module
+
+| Test Case ID | Title | Precondition | Test Steps | Test Data | Expected Result | Actual Result | Status |
+|---|---|---|---|---|---|---|---|
+| TClogin_1 | Verify login with valid credentials | User is on saucedemo.com login page | 1. Enter username "standard_user" 2. Enter password "secret_sauce" 3. Click Login button | username: standard_user, password: secret_sauce | User is logged in and redirected to the products page | User was logged in and redirected to products page | Pass |
+| TClogin_2 | Verify login with invalid credentials | User is on saucedemo.com login page | 1. Enter username "standard_user" 2. Enter password "tryingwrong" 3. Click Login button | username: standard_user, password: tryingwrong | System shows error message "Username and password do not match any user in this system" | System showed error message "Username and password do not match any user in this service" | Pass |
+| TClogin_3 | Verify login with empty password | User is on saucedemo.com login page | 1. Enter username "standard_user" 2. Leave password empty 3. Click Login button | username: standard_user, password: (empty) | System shows error message "Password is required" | System showed error message "Password is required" | Pass |
+| TClogin_4 | Verify login with empty username | User is on saucedemo.com login page | 1. Leave username empty 2. Enter password "secret_sauce" 3. Click Login button | username: (empty), password: secret_sauce | System shows error message "Username is required" | System showed error message "Username is required" | Pass |
+| TClogin_5 | Verify login with both fields empty | User is on saucedemo.com login page | 1. Leave username empty 2. Leave password empty 3. Click Login button | username: (empty), password: (empty) | System shows error message "Username and password are required" | System showed error message "Username and password are required" | Pass |
